@@ -1,8 +1,7 @@
 <?php
     $key = getenv('secret_key');
-    $args = $_SERVER["PATH_INFO"];
-    $arg_arr = explode("/",$args, "/");
-    print_r($arg_arr);
+    $data = explode("/",trim($_SERVER["PATH_INFO"],"/"));
+    print_r($data);
 
     print_r($_GET);
 ?>
