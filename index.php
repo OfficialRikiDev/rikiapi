@@ -5,13 +5,13 @@
 
     print_r($_GET);
 
-    $output = implode(', ', array_map(
-        function ($v, $k) { return sprintf("%s='%s'", $k, $v); },
+    $output = implode('&', array_map(
+        function ($v, $k) { return sprintf("%s=%s", $k, $v); },
         $_GET,
         array_keys($_GET)
     ));
     
-    $url = "https://" . $data[1]. ".roblox.com/". $data[0] . "/" .  implode("/",array_slice($data,1)) . "" . $output;
+    $url = "https://" . $data[1]. ".roblox.com/". $data[0] . "/" .  implode("/",array_slice($data,1)) . "?" . $output;
 
     echo $url;
 ?>
