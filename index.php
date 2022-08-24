@@ -17,12 +17,6 @@
     $response = curl_exec($ch);
     $result = json_decode($response);
     curl_close($ch); // Close the connection
-    if($result)
-    {
-      echo $result;
-    }
-    else 
-    {
-      http_response_code(407)
-    }
+    echo $result;
+   
 ?>
