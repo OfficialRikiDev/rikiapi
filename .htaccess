@@ -2,7 +2,7 @@ RewriteEngine On
 RewriteBase /
 
 RewriteCond %{REQUEST_URI} /+[^.]+$
-RewriteRule /(.+[^/])$ / [R=301,L]
+RewriteRule /(.+[^/])$ /^ [R=301,L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
