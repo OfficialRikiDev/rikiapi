@@ -28,6 +28,6 @@
     // Show me the result
     curl_close($ch);
     $json= json_decode($season_data, true);
-    echo $json;
+    echo $season_data;
    
 ?>
