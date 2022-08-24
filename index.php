@@ -22,6 +22,7 @@
 
     if (curl_errno($ch)) {
         print "Error: " . curl_error($ch);
+        http_response_code(400);
         exit();
     }
 
