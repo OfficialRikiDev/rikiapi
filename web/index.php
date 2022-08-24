@@ -1,4 +1,6 @@
 <?php
     $key = getenv('secret_key');
-    echo $key;
+    if(!isset($_POST["key"])){
+        http_response_code(407); 
+    }
 ?>
