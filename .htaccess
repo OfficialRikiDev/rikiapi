@@ -1,9 +1,6 @@
 RewriteEngine On
 RewriteBase /
 
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule / [R=301,L]
-
 RewriteCond %{REQUEST_FILENAME} /+[^.]+$
 RewriteRule ^(.+[^/])$ %{REQUEST_URI}/ [R=301,L]
 
